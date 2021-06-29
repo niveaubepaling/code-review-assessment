@@ -51,7 +51,7 @@ Implement the API specified in this document, then implement the UI against that
 | GET    | /list/{listId}          | Get a list by id                       | `{"data": {"name": "Grocery List", "createdAt": "2021-06-28T12:35:12.025Z", "items": []}}`          |                 200 |
 | GET    | /list                   | Get all lists (think about pagination) | `{"data": [{"id": 0, "name": "Grocery List"}, {"id": 1, "name": "Another List"}]}`                  |                 200 |
 | PUT    | /list/{listId}          | Update list details                    | `{"data": {"name": "Grocery Shopping List", "createdAt": "2021-06-28T12:35:12.025Z", "items": []}}` |                 200 |
-| PUT    | /list/{listId}          | Delete list                            | `{}`                                                                                                |                 200 |
+| DELETE    | /list/{listId}          | Delete list                            | `{}`                                                                                                |                 200 |
 | POST   | /list/{listId}          | Add new item to list                   | `{"data": {"id": 0, "name": "Buy Apples", "status": "todo"}}`                                       |                 200 |
 | GET    | /list/{listId}/{itemId} | Get single item                        | `{"data": {"id": 0, "name": "Buy Apples", "status": "todo"}}`                                       |                 200 |
 | PUT    | /list/{listId}/{itemId} | Update item details                    | `{"data": {"id": 0, "name": "Buy Apple", "status": "done"}}`                                        |                 200 |
