@@ -1,4 +1,4 @@
-# Todo list API + UI Assessment
+# Todo list Web API + user interface Assessment
 
 The goal of this assessment is to implement a todolist backend (API) and/or frontend (UI). The result will then be submitted for code review in order to establish your software engineering level.
 
@@ -13,16 +13,16 @@ The goal of this assessment is to implement a todolist backend (API) and/or fron
 - For the backend exercise: The reviewer will run your code in order to determine how well you implemented the API spec
 - As a last resort you
 
-## Backend exercise: Implement Todo List API
+## Backend exercise: Implement Todo List Web API
 
 Implement the API specified on the bottom of the page.
 
-## Frontend exercise: create a UI for Todo List API
+## Frontend exercise: create a user interface for Todo List Web API
 
 Implement a UI against the API specified at the bottom of the page.
-You will be provided with a development API baseurl to develop against.
+Use http://todo-api.niveaubepaling.nl to develop your user interface against.
 
-## Fullstack exercise: implement both API + UI
+## Fullstack exercise: implement both Web API + user interface
 
 Implement the API specified in this document, then implement the UI against that API.
 
@@ -43,7 +43,7 @@ Implement the API specified in this document, then implement the UI against that
 - Dockerize frontend
 - Run in the cloud or on a PaaS.
 
-## API specification
+## Web API specification
 
 | method | uri                     | description                            | response                                                                                            | success http status code |
 | ------ | ----------------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------- |
