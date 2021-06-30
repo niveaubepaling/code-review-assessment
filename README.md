@@ -20,7 +20,7 @@ Implement the API specified on the bottom of the page.
 ## Frontend exercise: create a user interface for Todo List Web API
 
 Implement a UI against the API specified at the bottom of the page.
-Use http://todo-api.niveaubepaling.nl to develop your user interface against.
+Use https://todo-api.niveaubepaling.nl to develop your user interface against.
 
 ## Fullstack exercise: implement both Web API + user interface
 
