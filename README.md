@@ -5,8 +5,8 @@ The goal of this assessment is to implement a todolist backend (API) and/or fron
 ## General Recommendations
 
 - Please put your code on a Git host like Github/Gitlab/Bitbucket etc.
-- Please provide clear steps on how to run your application in a README.md. 
-- Use a package manager (npm/yarn/pip/poetry/pipenv/composer etc...) and do **not** commit/upload your third party dependencies. 
+- Please provide clear steps on how to run your application in a README.md.
+- Use a package manager (npm/yarn/pip/poetry/pipenv/composer etc...) and do **not** commit/upload your third party dependencies.
 - Write some tests (a medior programmer should know how to do this properly)
 - Feel free to Dockerize your application
 - Tip: If you are unsure about new techniques, write code in the way you are used to do, this assessment is about seeing what you already know. Ofcourse you are free to try new technique as well
@@ -45,15 +45,14 @@ Implement the API specified in this document, then implement the UI against that
 
 ## Web API specification
 
-| method | uri                     | description                            | response                                                                                            | success http status code |
-| ------ | ----------------------- | -------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------- |
-| POST   | /list                   | Add a new list                         | `{"data": {"id": 0}}`                                                                               |                 201 |
-| GET    | /list/{listId}          | Get a list by id                       | `{"data": {"name": "Grocery List", "createdAt": "2021-06-28T12:35:12.025Z", "items": []}}`          |                 200 |
-| GET    | /list                   | Get all lists (think about pagination) | `{"data": [{"id": 0, "name": "Grocery List"}, {"id": 1, "name": "Another List"}]}`                  |                 200 |
-| PUT    | /list/{listId}          | Update list details                    | `{"data": {"name": "Grocery Shopping List", "createdAt": "2021-06-28T12:35:12.025Z", "items": []}}` |                 200 |
-| DELETE    | /list/{listId}          | Delete list                            | `{}`                                                                                                |                 200 |
-| POST   | /list/{listId}          | Add new item to list                   | `{"data": {"id": 0, "name": "Buy Apples", "status": "todo"}}`                                       |                 200 |
-| GET    | /list/{listId}/{itemId} | Get single item                        | `{"data": {"id": 0, "name": "Buy Apples", "status": "todo"}}`                                       |                 200 |
-| PUT    | /list/{listId}/{itemId} | Update item details                    | `{"data": {"id": 0, "name": "Buy Apple", "status": "done"}}`                                        |                 200 |
-| DELETE | /list/{listId}/{itemId} | Delete item                            | `{}`                                                                                                |                 200 |
-
+| method | uri                     | description                            | request body                                                                                                                                      | response body                                                                                       | success http status code |
+| ------ | ----------------------- | -------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | ------------------------ |
+| POST   | /list                   | Add a new list                         | `{"name": "the name of your list"}`                                                                                                               | `{"data": {"id": 0}}`                                                                               | 201                      |
+| GET    | /list/{listId}          | Get a list by id                       | N/A                                                                                                                                               | `{"data": {"name": "Grocery List", "createdAt": "2021-06-28T12:35:12.025Z", "items": []}}`          | 200                      |
+| GET    | /list                   | Get all lists (think about pagination) | N/A                                                                                                                                               | `{"data": [{"id": 0, "name": "Grocery List"}, {"id": 1, "name": "Another List"}]}`                  | 200                      |
+| PATCH  | /list/{listId}          | Update list details                    | `{"name": "some new name of your list"}`                                                                                                          | `{"data": {"name": "Grocery Shopping List", "createdAt": "2021-06-28T12:35:12.025Z", "items": []}}` | 200                      |
+| DELETE | /list/{listId}          | Delete list                            | N/A                                                                                                                                               | `{}`                                                                                                | 200                      |
+| POST   | /list/{listId}          | Add new item to list                   | `{"name": "the name of your item"}`                                                                                                               | `{"data": {"id": 0, "name": "Buy Apples", "completed": false}}`                                     | 200                      |
+| GET    | /list/{listId}/{itemId} | Get single item                        | N/A                                                                                                                                               | `{"data": {"id": 0, "name": "Buy Apples", "completed": false}}`                                     | 200                      |
+| PATCH  | /list/{listId}/{itemId} | Update item details                    | `{"name": "the name of your item", "completed" :true}` Fields `name` and `completed` are both optional but at least one of them has to be present | `{"data": {"id": 0, "name": "Buy Apple", "completed": true}}`                                       | 200                      |
+| DELETE | /list/{listId}/{itemId} | Delete item                            | N/A                                                                                                                                               | `{}`                                                                                                | 200                      |
