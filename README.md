@@ -11,7 +11,6 @@ The goal of this assessment is to implement a todolist backend (API) and/or fron
 - Dockerize your application if you are applying to a DevOps related role.
 - Tip: Write code in the way you are already used to do, this assessment is about seeing what you already know, not about learning new stuff.
 - For the backend exercise: The reviewer will run your code in order to determine how well you implemented the API spec
-- As a last resort you
 
 ## Backend exercise: Implement Todo List Web API
 
