@@ -8,8 +8,8 @@ The goal of this assessment is to implement a todolist backend (API) and/or fron
 - Please provide clear steps on how to run your application in a README.md.
 - Use a package manager (npm/yarn/pip/poetry/pipenv/composer etc...) and do **not** commit/upload your third party dependencies.
 - Write some tests (a medior programmer should know how to do this properly)
-- Feel free to Dockerize your application
-- Tip: If you are unsure about new techniques, write code in the way you are used to do, this assessment is about seeing what you already know. Ofcourse you are free to try new technique as well
+- Dockerize your application if you are applying to a DevOps related role.
+- Tip: Write code in the way you are already used to do, this assessment is about seeing what you already know, not about learning new stuff.
 - For the backend exercise: The reviewer will run your code in order to determine how well you implemented the API spec
 - As a last resort you
 
